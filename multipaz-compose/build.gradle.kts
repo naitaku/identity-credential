@@ -99,6 +99,7 @@ kotlin {
                 implementation(libs.play.services.identity.credentials)
                 implementation(libs.androidx.credentials)
                 implementation(libs.androidx.credentials.registry.provider)
+                implementation(libs.jp2.android)
             }
         }
     }

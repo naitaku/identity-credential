@@ -12,6 +12,7 @@ androidx-material = "1.12.0"
 androidx-test-junit = "1.1.5"
 compose-plugin = "1.7.1"
 faceDetection = "16.1.6"
+jp2Android = "1.0.5"
 junit = "4.13.2"
 kotlin = "2.1.21"
 kotlinx-coroutines = "1.8.1"
@@ -70,6 +71,7 @@ process-phoenix = "3.0.0"
 [libraries]
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 face-detection = { module = "com.google.mlkit:face-detection", version.ref = "faceDetection" }
+jp2-android = { module = "dev.keiji.jp2:jp2-android", version.ref = "jp2Android" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref="kotlinx-coroutines" }

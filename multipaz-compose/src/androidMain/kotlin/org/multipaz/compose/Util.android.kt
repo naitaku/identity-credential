@@ -15,6 +15,7 @@ import kotlinx.io.bytestring.ByteString
 import org.multipaz.compose.camera.CameraFrame
 import org.multipaz.context.applicationContext
 import java.io.ByteArrayOutputStream
+import com.gemalto.jp2.JP2Decoder;
 
 actual fun getApplicationInfo(appId: String): ApplicationInfo {
     val ai = applicationContext.packageManager.getApplicationInfo(appId, 0)
@@ -26,7 +27,11 @@ actual fun getApplicationInfo(appId: String): ApplicationInfo {
 }
 
 actual fun decodeImage(encodedData: ByteArray): ImageBitmap {
-    return BitmapFactory.decodeByteArray(encodedData, 0, encodedData.size).asImageBitmap()
+    return if (JP2Decoder.isJPEG2000(encodedData)) {
+        JP2Decoder(encodedData).decode().asImageBitmap()
+    } else {
+        BitmapFactory.decodeByteArray(encodedData, 0, encodedData.size).asImageBitmap()
+    }
 }
 
 actual fun encodeImageToPng(image: ImageBitmap): ByteString {
