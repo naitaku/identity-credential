@@ -57,6 +57,7 @@ import org.multipaz.documenttype.knowntypes.DrivingLicense
 import org.multipaz.documenttype.knowntypes.EUPersonalID
 import org.multipaz.documenttype.knowntypes.PhotoID
 import org.multipaz.documenttype.knowntypes.UtopiaMovieTicket
+import org.multipaz.documenttype.knowntypes.MynaCard
 import org.multipaz.mdoc.util.MdocUtil
 import org.multipaz.mdoc.vical.SignedVical
 import org.multipaz.secure_area_test_app.ui.CloudSecureAreaScreen
@@ -232,6 +233,7 @@ class App private constructor (val promptModel: PromptModel) {
         documentTypeRepository.addDocumentType(PhotoID.getDocumentType())
         documentTypeRepository.addDocumentType(EUPersonalID.getDocumentType())
         documentTypeRepository.addDocumentType(UtopiaMovieTicket.getDocumentType())
+        documentTypeRepository.addDocumentType(MynaCard.getDocumentType())
     }
 
     private suspend fun documentStoreInit() {

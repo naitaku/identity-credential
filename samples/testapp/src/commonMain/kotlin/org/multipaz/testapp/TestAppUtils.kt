@@ -24,6 +24,7 @@ import org.multipaz.documenttype.knowntypes.DrivingLicense
 import org.multipaz.documenttype.knowntypes.EUPersonalID
 import org.multipaz.documenttype.knowntypes.PhotoID
 import org.multipaz.documenttype.knowntypes.UtopiaMovieTicket
+import org.multipaz.documenttype.knowntypes.MynaCard
 import org.multipaz.mdoc.credential.MdocCredential
 import org.multipaz.mdoc.issuersigned.buildIssuerNamespaces
 import org.multipaz.mdoc.mso.MobileSecurityObjectGenerator
@@ -127,6 +128,7 @@ object TestAppUtils {
 
 
     val provisionedDocumentTypes = listOf(
+        MynaCard.getDocumentType(),
         DrivingLicense.getDocumentType(),
         PhotoID.getDocumentType(),
         EUPersonalID.getDocumentType(),
